@@ -126,4 +126,57 @@
 | participations                | [Participations!]!     | All user participations in a presale                      |
 
 
+# Participation
+
+| Field             | Type         | Description                                                           |
+| ----------------- | ------------ | --------------------------------------------------------------------- |
+| id                | ID!          | ILO + User address                                                    |
+| user              | User!        | Address of a user                                                     |
+| presale           | Presale!     | Presale that counts the participation                                 |
+| unclOwed          | BigDecimal!  | Amount of utility tokens owed to the user                             |
+| unclWithdrawn     | BigDecimal!  | Amount of utility token withdrawn by a user upon a failed presale     |
+| tokensOwed        | BigDecimal!  | Amount of presale tokens owed to the user                             |
+| tokensWithdrawn   | BigDecimal!  | Amount of presale token withdrawn by a user upon a successful presale |
+| baseDeposited     | BigDecimal!  | Amount of base tokens deposited by the user                           |
+| baseWithdrawn     | BigDecimal!  | Amount of base token withdrawn by a user upon a failed presale        |
+| isWhitelisted     | Boolean!     | Is user whitelisted to participate in the presale                     |
+
+
+# User 
+
+| Field                      | Type              | Description                             |
+| ---------------------------| ----------------- | --------------------------------------- |
+| id                         | ID!               | User address                            |
+| presaleParticipations      | [Participation!]! | Presale participations by a user        |
+| presaleCreations           | [Presale!]!       | Presales created by a user              |
+| totalPresaleParticipations | BigInt!           | Total number of presale participations  |
+| totalPresalesCreated       | BigInt!           | Total presales creations                |
+| vestedLocks                | [VestedLock!]!    | Vested locks user owns                  |
+| liquidityLocks             | [LiquidityLock!]! | Liquidity locks user owns               |
+
+
+# Token 
+
+| Field                | Type            | Description                               |
+| ---------------------| --------------- | ----------------------------------------- |
+| id                   | ID!             | Token address                             |
+| symbol               | String!         | Token symbol                              |
+| name                 | String!         | Token name                                | 
+| decimals             | BigInt!         | Token decimals                            |
+| lpToken0s            | [LPToken!]!     | All LP tokens where token is token0       |
+| lpToken1s            | [LPToken!]!     | All LP tokens where token is token1       |
+| vestedTokens         | [VestedToken!]! | All VestedToken entities for this token   |
+| presalesSalesTokens  | [Presale!]!     | All presales where token is a sale token  |
+| presalesBaseTokens   | [Presale!]!     | All presales where token is a base token  |
+
+
+# LPToken 
+
+| Field           | Type              | Description                         |
+| ----------------| ----------------- | ----------------------------------- |
+| id              | ID!               | Pair address                        |
+| token0          | Token!            | Token0 address                      |
+| token1          | Token!            | Token1 address                      | 
+| lockedLPTokens  | [LockedLPToken!]! | Locked LP Tokens for an LP address  |
+
 
