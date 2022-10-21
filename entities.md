@@ -74,3 +74,56 @@
 | startEmission | BigInt!       | Emission start timestamp             |
 | endEmission   | BigInt!       | Emission end timestamp               | 
 | owner         | User!         | Lock owner address                   |
+
+
+# PresaleFactory
+
+| Field         | Type          | Description                          |
+| ------------- | ------------- | ------------------------------------ |
+| id            | ID!           | Presale factory address              |
+
+
+
+# Presale
+
+| Field                         | Type                   | Description                                               |
+| ----------------------------- | ---------------------- | --------------------------------------------------------- |
+| id                            | ID!                    | Presale address                                           |
+| isEthPresale                  | Boolean!               | Is presale in native chain currency                       |
+| baseToken                     | Token!                 | Base token the presale is raising                         |
+| presaleToken                  | Token!                 | Token for sale                                            |
+| totalBaseCollected            | BigDecimal!            | Current base amount collected                             |
+| tokenAmountForPresale         | BigDecimal!            | Amount of tokens available for presale                    |
+| maxSpendPerBuyer              | BigDecimal!            | Max amount each buyer is allowed to spend                 |
+| numberOfBuyers                | BigInt!                | Current number of buyers                                  |
+| tokenPrice                    | BigDecimal!            | PresaleTokens per BaseTokens                              |
+| listingRate                   | BigDecimal!            | Listing price                                             |
+| softcap                       | BigDecimal!            | Minimum raise to count presale as a success in base token |
+| hardcap                       | BigDecimal!            | Maximum raise in base token                               |
+| owner                         | User!                  | Presale admin / owner                                     | 
+| startBlock                    | BigInt!                | Start block of the presale                                |
+| endBlock                      | BigInt!                | Presale raise deadline                                    |
+| liquidityPercent              | BigInt!                | Percent of the liquidity locked on Unicrypt               |
+| lockPeriod                    | BigInt!                | Duration of the liquidity lock                            |
+| round0Start                   | BigInt!                | Round0 start block                                        |
+| UNCLMaxParticipants           | BigInt!                | Max number of UNCL reserve allocation participants        |
+| UNCLParticipants              | BigInt!                | Number of uncl reserve allocation participants            |
+| UNCLAddress                   | Bytes!                 | Address of the utility token                              |
+| UNCLAmountPerAllocation       | BigDecimal!            | Utility token cost per allocation                         |
+| countryCode                   | BigInt!                | Country code of the project                               |
+| creationBlock                 | BigInt!                | Block at which the presale was created                    |
+| creationTimestamp             | BigInt!                | Timestamp at which the presale was created                |
+| lpGenerationTimestamp         | BigInt!                | Timestamp of the LP generation                            |
+| whitelistCurrentParticipants  | BigInt!                | Number of whitelisted users that deposited funds          |
+| whitelistAssigned             | BigInt!                | Number of whitelisted users assigned                      |
+| whitelistMaxParticipants      | BigInt!                | Maximum number of whitelist participants                  |
+| status                        | PresaleStatus!         | Current presale status                                    |
+| statusDetails                 | PresaleStatusDetailed! | Presale status in detail                                  |
+| UNCLBurnOnFail                | BigDecimal!            | Amount of utility token burned on presale fail            |
+| tokenSold                     | BigDecimal!            | Amount of presale tokens sold                             |
+| tokensWithdrawn               | BigDecimal!            | Tokens withdrawn after a successful presale               |
+| baseTokensWithdrawn           | BigDecimal!            | Total base tokens withdrawn on presale failure            |
+| participations                | [Participations!]!     | All user participations in a presale                      |
+
+
+
