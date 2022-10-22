@@ -1,20 +1,20 @@
 # Entities
 
 ## Entities for the Unicrypt Subgraph are all listed below
-- [Locker](#Locker)
-- [LockedLPToken](#LockedLPToken)
-- [LiquidityLock](#LiquidityLock)
-- [VestedToken](#VestedToken)
-- [VestedLock](#VestedLock)
-- [PresaleFactory](#PresaleFactory)
-- [Presale](#Presale)
-- [Participation](#Participation)
-- [User](#User)
-- [Token](#Token)
-- [LPToken](#LPToken)
+- [Locker](#locker)
+- [LockedLPToken](#lockedlptoken)
+- [LiquidityLock](#liquiditylock)
+- [VestedToken](#vestedtoken)
+- [VestedLock](#vestedlock)
+- [PresaleFactory](#presalefactory)
+- [Presale](#presale)
+- [Participation](#participation)
+- [User](#user)
+- [Token](#token)
+- [LPToken](#lptoken)
 
 
-# Locker
+## Locker
 
 | Field        | Type         | Description                 |
 | -------------| -------------| --------------------------- |
@@ -23,7 +23,7 @@
 | totalTokens  | BigInt!      | Total number of Tokens      |
 
 
-# LockedLPToken
+## LockedLPToken
 
 | Field         | Type              | Description                                   |
 | --------------| ------------------| --------------------------------------------- |
@@ -35,7 +35,7 @@
 | locks         | [LiquidityLock!]! | Get all locks for LP token                    |
 
 
-# LiquidityLock
+## LiquidityLock
 
 | Field          | Type            | Description                                     |
 | ---------------| --------------- | ----------------------------------------------- |
@@ -50,7 +50,7 @@
 | owner          | User!           | Lock owner address                              |
 
 
-# VestedToken
+## VestedToken
 
 | Field          | Type           | Description                                 |
 | ---------------| -------------- | ------------------------------------------- |
@@ -62,7 +62,7 @@
 | vestedLocks    | [VestedLock!]! | Get all locks for a token                   |
 
 
-# VestedLock
+## VestedLock
 
 | Field         | Type          | Description                          |
 | ------------- | ------------- | ------------------------------------ |
@@ -76,7 +76,7 @@
 | owner         | User!         | Lock owner address                   |
 
 
-# PresaleFactory
+## PresaleFactory
 
 | Field         | Type          | Description                          |
 | ------------- | ------------- | ------------------------------------ |
@@ -84,7 +84,7 @@
 
 
 
-# Presale
+## Presale
 
 | Field                         | Type                   | Description                                               |
 | ----------------------------- | ---------------------- | --------------------------------------------------------- |
@@ -126,7 +126,7 @@
 | participations                | [Participations!]!     | All user participations in a presale                      |
 
 
-# Participation
+## Participation
 
 | Field             | Type         | Description                                                           |
 | ----------------- | ------------ | --------------------------------------------------------------------- |
@@ -142,7 +142,7 @@
 | isWhitelisted     | Boolean!     | Is user whitelisted to participate in the presale                     |
 
 
-# User 
+## User 
 
 | Field                      | Type              | Description                             |
 | ---------------------------| ----------------- | --------------------------------------- |
@@ -155,7 +155,7 @@
 | liquidityLocks             | [LiquidityLock!]! | Liquidity locks user owns               |
 
 
-# Token 
+## Token 
 
 | Field                | Type            | Description                               |
 | ---------------------| --------------- | ----------------------------------------- |
@@ -170,7 +170,7 @@
 | presalesBaseTokens   | [Presale!]!     | All presales where token is a base token  |
 
 
-# LPToken 
+## LPToken 
 
 | Field           | Type              | Description                         |
 | ----------------| ----------------- | ----------------------------------- |
