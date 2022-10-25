@@ -17,9 +17,7 @@ Description: This query returns two types of locker contracts - UniswapV2Locker 
 }
 
 ```
-Currently, there is a single token vesting contract and multiple contracts deployed for each supported AMM (on eth it’s univ2 and sushi).
-
-Liquidity lockers only support lp pairs, tokenVesting is primarily for non-lp tokens.
+Currently, there is a single token vesting contract and multiple contracts deployed for each supported AMM (on eth it’s univ2 and sushi). Liquidity lockers only support lp pairs, tokenVesting is primarily for non-lp tokens.
 
 
 ### LPToken
