@@ -1,6 +1,5 @@
 # Entities
 
-## Entities for the Unicrypt Subgraph are all listed below
 - [Locker](#locker)
 - [LockedLPToken](#lockedlptoken)
 - [LiquidityLock](#liquiditylock)
