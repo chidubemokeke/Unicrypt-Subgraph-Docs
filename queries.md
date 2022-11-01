@@ -1,7 +1,11 @@
 ## Sample Queries
-Below are some sample queries you can use to gather information from the Unicrypt subgraph
+Here, you'll learn how to gather information from the Unicrypt subgraph by writing GraphQL queries on it. 
 
 You can build your own queries using a [GraphQL Explorer](https://graphiql-online.com/graphiql) and enter your endpoint to limit the data to exactly what you need.
+
+You can fetch data points like 
+- [Lockers](#lockers)
+- [LPToken](#lptoken)
 
 ### Lockers
 
