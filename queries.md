@@ -47,7 +47,7 @@ Locks with expired unlockDate (unlockDate > current timestamp) mean the liquidit
 
 ## Users
 
-The User entity tracks all protocol interactions by a wallet - created presales, presales that user participated in and all locks.
+The User entity tracks all protocol interactions by a wallet. This query fetches data for users presale participations. 
 
 ```graphql
 {
