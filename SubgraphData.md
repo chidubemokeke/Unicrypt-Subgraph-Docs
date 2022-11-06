@@ -6,16 +6,15 @@ This subgraph can be used to query on-chain Unicrypt data. The subgraph data is 
 
 The Unicrypt subgraph works by listening for events emitted by one or more data sources (Smart Contracts) on the various chains. It handles the indexing and caching of data which can later be queried using the GraphQL API Endpoint, providing an excellent developer experience.
 
-### Get Started
+## Get Started
 
 Learn more about how subgraphs work by checking out [The Graph's official documentation](https://thegraph.com/docs/en/). If you are unfamiliar with GraphQL, we recommend taking a quick look through their documentation first [here](https://graphql.org/learn/)
-
 
 ## Helpful Resources
 
 - [Video Tutorial on creating an API Key](https://www.youtube.com/watch?v=UrfIpm-Vlgs)
-- [Managing your API Key & setting your indexer preferences](https://thegraph.com/docs/en/studio/managing-api-keys/ )
-- [Querying from an application](https://thegraph.com/docs/en/developer/querying-from-your-app/) 
+- [Managing your API Key & setting your indexer preferences](https://thegraph.com/docs/en/studio/managing-api-keys/)
+- [Querying from an application](https://thegraph.com/docs/en/developer/querying-from-your-app/)
 - [How to use the explorer and playground to query on-chain data](https://medium.com/@chidubem_/how-to-query-on-chain-data-with-the-graph-f8507488215)
 - [Explorer Page](https://thegraph.com/explorer/subgraph?id=FDrqtqbp8LhG1hSnwtWB2hE6C97FWA54irrozjb2TtMH&view=Overview)
 - Graphql Endpoint: `https://gateway.thegraph.com/api/[api-key]/subgraphs/id/4twAeoq2GRjZGcRPu3bD2issfeuZpMLm5YPQsiHyyeUF`
