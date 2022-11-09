@@ -9,6 +9,7 @@ You can fetch data points like
 - [Lockers](#lockers)
 - [LPToken](#lptoken)
 - [Users](#users)
+- [Presales](#presales)
 
 ## Lockers
 
@@ -47,7 +48,7 @@ Locks with expired unlockDate (unlockDate > current timestamp) mean the liquidit
 
 ## Users
 
-The User entity tracks all protocol interactions by a wallet. This query fetches data for users presale participations. 
+The User entity tracks all protocol interactions by a wallet. This query fetches data for users presale participations.
 
 ```graphql
 {
@@ -64,3 +65,29 @@ The User entity tracks all protocol interactions by a wallet. This query fetches
 ```
 
 Base token is usually eth or usdc that presale token is paired against once lp pair is created upon successful presale
+
+## Presales
+
+Description: This query returns presales that are active.
+
+```graphql
+{
+  presales(where: { status: Active }) {
+    UNCLAmountPerAllocation
+    tokenAmountForPresale
+    whitelistAssigned
+    statusDetails
+    tokenPrice
+    hardcap
+    softcap
+    isEthPresale
+    lockPeriod
+    listingRate
+    presaleToken {
+      id
+      name
+      symbol
+    }
+  }
+}
+```
